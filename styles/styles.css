@@ -2,23 +2,18 @@
 
 :root {
     /*Colors*/
-
     /*Primary*/
-
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%);
 
     /*Accent*/
-
     --blue: hsl(248, 32%, 49%);
 
     /*Neutral*/
-
     --dark-Blue: hsl(249, 10%, 26%);
     --dark-Blue-Opacity: rgb(62, 60, 73, 0.2);
     --grayish-Blue: hsl(246, 25%, 77%);
     --white: white;
-
 }
 
 * {
@@ -59,8 +54,11 @@ article span {
 
 body {
     padding: 0;
-    margin: 0; 
-    
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 button {
@@ -120,11 +118,13 @@ h1 {
 }
 
 html {
+
     font-family: 'Poppins', sans-serif;
     background-image: url(/images/bg-intro-mobile.png);
     background-color: var(--red);
     font-size: 16px;
-    }
+
+}
 
 
 input {
@@ -144,20 +144,10 @@ input:focus {
 }
 
 main {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 95%;
     max-width: 600px;
-/*     margin: 0 auto;
- */    margin: 0;
-    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
+    margin: 0;
+
 }
 
 p {
@@ -168,12 +158,22 @@ p {
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px),
+screen and (max-height: 1020px) {
+    body {
+        height: 100%;
+    }
+}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    ...
+@media only screen and (min-width: 600px),
+screen and (min-height: 1020px) {
+    body {
+        height: 100vh;
+    }
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
