@@ -57,6 +57,12 @@ article span {
     color: hsl(228, 45%, 44%);
 }
 
+body {
+    padding: 0;
+    margin: 0; 
+    
+}
+
 button {
     display: block;
     color: var(--white);
@@ -82,8 +88,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
 }
 
 #form-table {
@@ -116,14 +120,12 @@ h1 {
 }
 
 html {
-    padding: 0;
-    margin: 0;
     font-family: 'Poppins', sans-serif;
     background-image: url(/images/bg-intro-mobile.png);
     background-color: var(--red);
     font-size: 16px;
+    }
 
-}
 
 input {
     display: block;
@@ -136,16 +138,26 @@ input {
     width: 88%;
 }
 
+input:focus {
+    border: 2px solid var(--red);
+    outline: none;
+}
+
 main {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  /*   height: 100vh; */
     width: 95%;
     max-width: 600px;
-    margin: 0 auto;
-
+/*     margin: 0 auto;
+ */    margin: 0;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
 }
 
 p {
@@ -156,9 +168,7 @@ p {
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
