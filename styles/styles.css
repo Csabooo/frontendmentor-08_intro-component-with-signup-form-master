@@ -23,12 +23,12 @@
 #accent {
     background-color: var(--blue);
     border-radius: 0.5rem;
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 1rem;
     font-weight: 400;
     box-shadow: 0 8px var(--dark-Blue-Opacity);
-
-
+    text-align: center;
+    color: var(--white);
 }
 
 article {
@@ -46,6 +46,7 @@ article span {
     font-size: 0.7rem;
     text-align: center;
     padding: 0;
+    margin: 0;
 }
 
 .attribution a {
@@ -56,6 +57,7 @@ body {
     padding: 0;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -72,6 +74,7 @@ button {
     width: 88%;
     margin-top: 5%;
     font-size: 1.05rem;
+    letter-spacing:0.1rem;
 }
 
 button:hover {
@@ -173,26 +176,155 @@ screen and (max-height: 1020px) {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px),
-screen and (min-height: 1020px) {
-    body {
-        height: 100vh;
-    }
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    ...
-}
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    ...
+
+    body {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    button {
+        padding: 2% 0;
+        border-radius: 6px;
+        margin-top: 2%;
+        font-size: 0.8rem;
+    }
+
+    #accent {
+        width: 100%;
+        padding: 2% 5%;
+        font-size: 0.8rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        font-weight: 400;
+
+    }
+
+    br {
+        display: none;
+    }
+
+    .errorSign {
+        bottom: 60px;
+        left: 140px;
+    }
+
+    #form-table {
+        width: 100%;
+        padding: 0;
+    }
+
+    #form-table p {
+        color: var(--grayish-Blue);
+        font-size: 0.6rem;
+        padding: 1% 6% 0 6%;
+
+    }
+
+    h1{
+        margin:0;
+    }
+
+    #explain {
+       margin-bottom: 0;
+  }
+
+     input {
+        padding: 2% 5%;
+        border-radius: 6px;
+        margin-top: 2%;
+       font-size: 0.8rem;
+    }
+
+    main {
+        width: 100%;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    p {
+        padding: 0;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    ...
+  
+    article{
+        padding: 0 3%;
+    }
+
+    #accent {
+        width: 95%;
+        padding: 4% 5%;
+        font-size: 1rem;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    button {
+        padding: 3% 0;
+        border-radius: 6px;
+        margin-top: 3%;
+        font-size: 1rem;
+    }
+
+    .errorSign {
+        bottom: 75px;
+        left: 180px;
+    }
+
+   #explain {
+        font-size: 1.1rem;
+   }
+
+    #form-table {
+        width: 95%;
+        padding: 3% 0;
+    }
+
+    #form-table p {
+        font-size: 0.7rem;
+
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    input {
+        padding: 3% 5%;
+        border-radius: 6px;
+        margin-top: 3%;
+        font-size: 1rem;
+    }
+
+    main {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
 }

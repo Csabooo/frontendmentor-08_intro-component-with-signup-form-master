@@ -15,6 +15,11 @@ function doCheck(e) {
         for (let i = 0; i < errorMessages.length; i++) {
             errorMessages[i].parentNode.removeChild(errorMessages[i]);
 
+            /*vagy:*/
+            /*   errorMessages.forEach(errorMessage => {
+                  errorMessage.remove();
+                 
+              }); */
 
         }
         for (let i = 0; i < inputFields.length; i++) {
@@ -23,15 +28,8 @@ function doCheck(e) {
             inputFields[i].placeholder = originalPlaceholders[i];
             errors[i].style = "display: none";
         }
-    }
-
-    /*vagy:*/
-    /*   errorMessages.forEach(errorMessage => {
-          errorMessage.remove();
-         
-      }); */
-    else {
-
+       
+    } else {
 
         for (let i = 0; i < inputFields.length; i++) {
             if (inputFields[i].value === "") {
@@ -56,7 +54,7 @@ function doCheck(e) {
                 p.innerText = "Looks like this is not an email";
                 inputFields[i].insertAdjacentElement("afterend", p);
                 errors[i].style = "display: block";
-            }
+            } 
         }
     }
     e.preventDefault();
@@ -69,3 +67,4 @@ function messageFormating(message) {
     message.style.padding = "0 0 0 40%";
     message.style.color = "var(--red)";
 }
+
