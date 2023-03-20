@@ -78,6 +78,13 @@ button:hover {
     cursor: pointer;
 }
 
+.errorSign {
+    display: none;
+    position: relative;
+    bottom: 75px;
+    left: 120px;
+}
+
 #explain {
     margin-bottom: 20%;
 }
